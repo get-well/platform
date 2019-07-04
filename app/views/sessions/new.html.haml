@@ -1,0 +1,13 @@
+.d-flex.justify-content-center.align-items-center
+  %fieldset
+    %h2.text-center Iniciar sesion
+    %hr
+    .card.p-4
+      = bootstrap_form_for :session, url: session_path do |form|
+        = form.email_field :email
+        = form.password_field :password, label: 'Contraseña'
+        = form.submit 'Iniciar sesion', class: 'btn w-100 m-1 btn-success'
+      .d-flex.flex-column.text-center
+        = link_to '¿Olvidaste tu contraseña?', new_password_path
+        - if Clearance.configuration.allow_sign_up?
+          = link_to 'Crear cuenta', sign_up_path, { class: 'text-muted'  }
