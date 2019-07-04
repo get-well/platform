@@ -1,0 +1,17 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to 'Get Well', root_path, class: 'navbar-brand'
+  %button.navbar-toggler{ 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent' }
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse#navbarSupportedContent
+    %ul.navbar-nav.mr-auto
+      %li.nav-item= link_to 'Inicio', {}, { class: 'nav-link' }
+      %li.nav-item= link_to 'Servicios', {}, { class: 'nav-link' }
+      %li.nav-item= link_to 'Acerca de nosotros', {}, { class: 'nav-link' }
+      %li.nav-item= link_to 'Blog', {}, { class: 'nav-link' }
+      %li.nav-item= link_to 'Contacto', {}, { class: 'nav-link' }
+    .navbar-text
+      - if signed_in?
+        = link_to 'Cerrar sesion', sign_out_path,
+                                   { method: :delete, class: 'btn btn-secondary text-white' }
+      - else
+        = link_to 'Iniciar sesion', sign_in_path, { class: 'btn btn-primary text-white' }
