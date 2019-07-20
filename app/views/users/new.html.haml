@@ -1,0 +1,8 @@
+.d-flex.justify-content-center.align-items-center
+  %fieldset
+    %h2.text-center Crear cuenta
+    %hr
+    .card.p-4
+      = bootstrap_form_for @user do |form|
+        = render partial: '/users/form', locals: { f: form }
+        = form.submit 'Guardar', class: 'btn w-100 btn-success'

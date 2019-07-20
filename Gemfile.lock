@@ -74,6 +74,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    bootstrap_form (4.2.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     builder (3.2.3)
     capybara (3.25.0)
       addressable
@@ -309,6 +312,7 @@ DEPENDENCIES
   aws-sdk-s3 (~> 1.8.2)
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
+  bootstrap_form (>= 4.2.0)
   capybara (>= 2.15)
   chromedriver-helper
   clearance
