@@ -7,7 +7,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jbuilder', '~> 2.10'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.1'
-gem 'rails', '~> 6.0.3'
+gem 'rails', '~> 6.1.1'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
